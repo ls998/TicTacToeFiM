@@ -1,6 +1,5 @@
 package ponyframework;
 
-import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -12,7 +11,7 @@ import java.util.List;
  *         NOTE - Players who are eliminated cannot win - Players who are tied,
  *         but win by another rule win
  */
-public interface WinRules extends Serializable {
+public interface WinRules {
 	/**
 	 * Determines winners of the game (if any)
 	 * 
