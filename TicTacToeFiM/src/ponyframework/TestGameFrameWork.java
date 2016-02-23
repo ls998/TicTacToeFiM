@@ -2,6 +2,7 @@ package ponyframework;
 
 import ponyframework.defaultRules.RowWinRule;
 import ponyframework.defaultRules.TakenRule;
+import ponyframework.defaultRules.TieRule;
 import ponyframework.defaultRules.TurnRule;
 import test.GameEventLogger;
 import test.Log;
@@ -73,7 +74,13 @@ public class TestGameFrameWork {
 		printgamedat(g, " ");
 		Log.debug.println();
 
-		
+		// tie test
+		Game.GameBuilder.customBoard(g, new int[][] { { 0, 1, 0 }, { 1, 0, 1 }, { 0, 1, 0 } });
+		Log.debug.println("tie test");
+		printgamedat(g, " ");
+		g.winRules.add(new TieRule());
+		g.checkWinners();
+		Log.debug.println();
 	}
 
 	public static void printgamerule(MoveRule rule, String indent) {
