@@ -1,14 +1,12 @@
 package ponyframework;
 
-import java.io.Serializable;
-
 /**
  * Any rule that determines whether a move is legal must be added here
  * 
  * @author sunny
  *
  */
-public interface MoveRule extends Serializable {
+public interface MoveRule {
 	/**
 	 * Should return true if the move follows rule, otherwise return false
 	 * 
