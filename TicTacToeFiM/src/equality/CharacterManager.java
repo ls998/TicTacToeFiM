@@ -1,4 +1,3 @@
-
 package equality;
 
 import java.util.ArrayList;
@@ -23,14 +22,21 @@ public class CharacterManager {
 			CharacterInfo info = getCharacter(id);
 			for (Long moduleid : info.getLoadedModules()) {
 				CharacterInfoModule module = info.getModule(moduleid);
-				if (modulesearch.equals(module))
-					result.add(id);
+				if (module != null)
+					if (modulesearch.equals(module))
+						result.add(id);
 			}
 		}
 		return result;
 	}
 
 	public void addCharacter(CharacterInfo info) {
+		if (characters.containsKey(info.id))
+			throw new IllegalArgumentException("Character already exists");
 		characters.put(info.id, info);
+	}
+
+	public void removeCharacter(CharacterID id) {
+		characters.remove(id);
 	}
 }

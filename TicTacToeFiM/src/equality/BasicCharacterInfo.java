@@ -1,12 +1,28 @@
 package equality;
 
-public class BasicCharacterInfo extends CharacterInfoModule {
-	
-	
+import java.util.List;
+import java.util.Random;
 
-	public BasicCharacterInfo(long id, String name) {
+public class BasicCharacterInfo extends CharacterInfoModule {
+
+	public static final long id = 3175613242l;
+
+	private static final String name = "basic info";
+
+	public final String characterName;
+
+	private final List<String> winSayings;
+
+	private final Random rng;
+
+	public BasicCharacterInfo(String characterName, List<String> winSayings) {
 		super(id, name);
-		// TODO Auto-generated constructor stub
+		this.characterName = characterName;
+		this.winSayings = winSayings;
+		rng = new Random();
 	}
 
+	public String getWinSaying() {
+		return winSayings.get(rng.nextInt(winSayings.size()));
+	}
 }

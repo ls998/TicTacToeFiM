@@ -27,5 +27,4 @@ public class CharacterID extends CharacterInfoModule {
 	public int hashCode() {
 		return (int) characterid;
 	}
-
 }
