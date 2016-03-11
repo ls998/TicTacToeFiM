@@ -1,0 +1,19 @@
+/*
+    The Stage background.
+    Currently a Rectangle node
+*/
+.decoration-background{
+    -fx-fill: rgba(255,255,255,1);
+    -fx-stroke-width: 0;
+    -fx-arc-width:0px;
+    -fx-arc-height:0px;
+}
+/*
+    Defines the rectangle responsible for the shadow
+*/
+.decoration-shadow{
+    -fx-fill: black;
+    -fx-stroke-width: 0;
+    -fx-arc-width:0px;
+    -fx-arc-height:0px;
+}
