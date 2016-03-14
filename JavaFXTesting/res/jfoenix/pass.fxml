@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import java.net.URL?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="364.0" prefWidth="480.0"
+	xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="jfoenix.PasswordController">
+	<stylesheets>
+		<URL value="@application.css" />
+	</stylesheets>
+	<children>
+		<JFXPasswordField fx:id="passTxt" labelFloat="true"
+			layoutX="20.0" layoutY="39.0" maxWidth="229.0" minWidth="229.0"
+			prefHeight="29.0" prefWidth="229.0" promptText="Enter your password"
+			AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="39.0" />
+		<Text fx:id="invalidTxt" fill="#f80000" layoutX="28.0" layoutY="82.0"
+			strokeType="OUTSIDE" strokeWidth="0.0" text="Password is invalid"
+			AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="70.0" />
+	</children>
+</AnchorPane>

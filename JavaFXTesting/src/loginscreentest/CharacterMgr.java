@@ -35,8 +35,8 @@ public class CharacterMgr {
 	}
 
 	public static int getUser(String name) {
-		if(reverse.containsKey(name))
-		return reverse.get(name);
+		if (reverse.containsKey(name))
+			return reverse.get(name);
 		return -1;
 	}
 
